@@ -1,4 +1,4 @@
-// funcion de alerta 
+// ******************************* funcion de alerta *******************************
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 const appendAlert = (message, type) => {
   const wrapper = document.createElement('div')
@@ -19,7 +19,11 @@ if (alertTrigger) {
   })
 }
 
-// funcion popover
+
+
+
+
+// ******************************* funcion popover *******************************
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 const popover = new bootstrap.Popover('.example-popover', {
@@ -27,17 +31,29 @@ const popover = new bootstrap.Popover('.example-popover', {
   })
 
 
-  // **********************************  POPOVER NO FUNCIONA DDD: **************************************
 
-const toastTrigger = document.getElementById('liveToastBtn')
-const toastLiveExample = document.getElementById('liveToast')
 
-if (toastTrigger) {
-  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-  toastTrigger.addEventListener('click', () => {
-    toastBootstrap.show()
-  })
-}
 
-  // **********************************  POPOVER NO FUNCIONA DDD: **************************************
+// ******************************* funcion toast *******************************
+
+
+const toastButton = document.querySelector('#toast-button');
+
+        const toastContent = document.querySelector('.toast');
+
+        if (toastButton) {
+            toastButton.addEventListener('click', function (){
+
+                
+        const toast = new bootstrap.Toast(toastContent);
+
+        toast.show();
+
+
+            });
+        }
+
+// funcion offcanvas
+
+
 
